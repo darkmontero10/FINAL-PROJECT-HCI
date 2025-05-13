@@ -12,3 +12,5 @@
 ![pusa er 1](https://github.com/user-attachments/assets/fc71edd0-16da-48af-bc21-704f4fcef37d)
 ![pusa er 2](https://github.com/user-attachments/assets/999f6bbf-6abf-4a8d-bc17-62db98844cd3)
 ![pusa er 3](https://github.com/user-attachments/assets/74d61d91-8cf9-433c-b402-9ab1ee500dcf)
+![cat-7956026](https://github.com/user-attachments/assets/515eb160-0483-4345-ac6d-9fb02ae499c5)
+![cat-7732877](https://github.com/user-attachments/assets/46a062e2-f985-423f-a86c-cf3b79d7ab22)
