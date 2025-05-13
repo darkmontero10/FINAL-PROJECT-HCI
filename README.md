@@ -15,5 +15,5 @@
 ![cat-8047625](https://github.com/user-attachments/assets/f6df5a1f-6c9b-4376-9961-7c606cef85f7)
 ![maine-coon-7514053](https://github.com/user-attachments/assets/cc626c96-aa04-433e-9a15-24e027f02223)
 ![cat-6762936_1920](https://github.com/user-attachments/assets/41c41f20-44e6-4067-b901-9da241185e1f)
-
+![pusa 1](https://github.com/user-attachments/assets/4d36a64a-4b92-4504-ad84-e68f7f64b77c)
 ![bakgrownd](https://github.com/user-attachments/assets/f2e6b8a4-5120-4e85-b747-4f2475c1f2dd)
