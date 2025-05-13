@@ -17,3 +17,8 @@
 ![cat-6762936_1920](https://github.com/user-attachments/assets/41c41f20-44e6-4067-b901-9da241185e1f)
 ![pusa 1](https://github.com/user-attachments/assets/4d36a64a-4b92-4504-ad84-e68f7f64b77c)
 ![bakgrownd](https://github.com/user-attachments/assets/f2e6b8a4-5120-4e85-b747-4f2475c1f2dd)
+
+
+![pusa 2](https://github.com/user-attachments/assets/70ff1f59-01b7-4966-b7fb-d6069fd83353)
+![pusa 3](https://github.com/user-attachments/assets/fcfe386b-3c0f-462d-9ebc-7f3b74c6cf25)
+![pusa 4](https://github.com/user-attachments/assets/18a7e3fc-6d41-4b95-8fed-0ff7d406a42b)
