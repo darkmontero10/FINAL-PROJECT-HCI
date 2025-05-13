@@ -1,26 +1,8 @@
 # FINAL-PROJECT-HCI
-![cat-background png](https://github.com/user-attachments/assets/2c444f27-d552-40be-a505-bbe06c54743c)
-![cat-7732877](https://github.com/user-attachments/assets/4181a394-e28a-4726-bc18-27ab75bb34f8)
-![cat-7956026](https://github.com/user-attachments/assets/8b24378e-0353-4428-aedd-d0e4edd2ff5b)
-![Peterbald Cat Breed Information _ Peterbald Cat Characteristics, Grooming, Temperament Breed Information   Insights _ Basepaws](https://github.com/user-attachments/assets/5d9f74e9-53f7-44ed-866c-6db4f629cc66)
-![download](https://github.com/user-attachments/assets/6591f1cf-4a90-4115-acee-b52da725e7eb)
-![cat-8213331](https://github.com/user-attachments/assets/3294f06d-a3fb-43f4-ad49-0279699c739e)
-![cat-4773511](https://github.com/user-attachments/assets/f5de8bea-e55e-4b22-9603-dbf2b7124fdc)
-![bengal-7974020](https://github.com/user-attachments/assets/8047f757-8ac1-4a20-be51-ee6c043209b7)
-![siamese-4980776](https://github.com/user-attachments/assets/4ec2d4ae-1f61-4562-9112-2798da3ac4f1)
-![cat-1469107](https://github.com/user-attachments/assets/f03b9e9f-eaaf-402f-8722-009f111f445c)
-![cat-7690358](https://github.com/user-attachments/assets/68a74128-283f-43f5-a821-06eabf45ca3f)
-![kathy-5128053](https://github.com/user-attachments/assets/13983374-5827-4428-927c-1e27f9f86a01)
-![sphynx-6669640](https://github.com/user-attachments/assets/99b3ffbf-9954-41ab-8d5f-f0af781c8394)
-![cat-8047625](https://github.com/user-attachments/assets/f6df5a1f-6c9b-4376-9961-7c606cef85f7)
-![maine-coon-7514053](https://github.com/user-attachments/assets/cc626c96-aa04-433e-9a15-24e027f02223)
-![cat-6762936_1920](https://github.com/user-attachments/assets/41c41f20-44e6-4067-b901-9da241185e1f)
-![pusa 1](https://github.com/user-attachments/assets/4d36a64a-4b92-4504-ad84-e68f7f64b77c)
-![bakgrownd](https://github.com/user-attachments/assets/f2e6b8a4-5120-4e85-b747-4f2475c1f2dd)
-
 ![pusa 2](https://github.com/user-attachments/assets/70ff1f59-01b7-4966-b7fb-d6069fd83353)
 ![pusa 3](https://github.com/user-attachments/assets/fcfe386b-3c0f-462d-9ebc-7f3b74c6cf25)
 ![pusa 4](https://github.com/user-attachments/assets/18a7e3fc-6d41-4b95-8fed-0ff7d406a42b)
 
 
 ![pusa 2](https://github.com/user-attachments/assets/e8f28def-63ff-4462-944e-964b19dc1f06)
+![pusa 4](https://github.com/user-attachments/assets/176399de-2f1f-4b1a-a1ae-bc3fa4488706)
