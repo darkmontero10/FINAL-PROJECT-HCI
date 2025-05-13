@@ -6,3 +6,6 @@
 
 ![pusa 2](https://github.com/user-attachments/assets/e8f28def-63ff-4462-944e-964b19dc1f06)
 ![pusa 4](https://github.com/user-attachments/assets/176399de-2f1f-4b1a-a1ae-bc3fa4488706)
+![pusa short 1](https://github.com/user-attachments/assets/a314b518-7724-486c-ba01-4112d7d94058)
+![pusa short 2](https://github.com/user-attachments/assets/2432253a-c9ae-4e33-b602-3eb01f7902f4)
+![pusa short 3](https://github.com/user-attachments/assets/b6a7c573-609a-467c-8816-36a33230028f)
