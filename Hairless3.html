@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Long Coat Cats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://private-user-images.githubusercontent.com/211522598/443465800-331e1738-ae44-4f90-8e38-d25aba89ed91.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxOTEzODUsIm5iZiI6MTc0NzE5MTA4NSwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzNDY1ODAwLTMzMWUxNzM4LWFlNDQtNGY5MC04ZTM4LWQyNWFiYTg5ZWQ5MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxNFQwMjUxMjVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jNzM4NDM3ODJiYzcxODM2MjM4ODg2ODViOTI0NGI2ZmMxNGZmYzZkMGMzNjcxZDdlMjFlOGQzNGJkODQ3ZWJhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.3JbZoV6Psg0rhcm5z4qn7Mi9eefjY898iUZEk0eh22g') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: auto;
+    }
+    .breed-info {
+      background: rgba(255, 255, 255, 0.341);
+      border-radius: 16px;
+      padding: 50px;
+      width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .breed-info h3 {
+      margin-top: 0;
+    }
+    .breed-info p {
+      font-size: 20px;
+       color: #e4e0e0;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+    .close-btn:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="breed-info">
+    <span class="close-btn" onclick="goBack()">×</span>
+    <h3>Donskoy</h3>
+    <p>
+      "The Donskoy cat, also known as the Russian Hairless, is a distinctive breed known for its lack of fur. Despite being hairless, their skin is soft, warm, and covered with a fine down, giving them a velvety texture. Donskoy cats are highly social, affectionate, and intelligent, often seeking the attention of their owners and forming close bonds. They are active and playful, enjoying interactive games and showing curiosity in their environment. Known for their expressive eyes and wrinkled skin, the Donskoy cat is an intriguing and loving companion that thrives on human interaction and warmth."
+    </p>
+  </div>
+
+  <script>
+    function goBack() {
+      // Redirect back to the breed list or initial page
+      window.history.back();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PurrCat - About Us</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://private-user-images.githubusercontent.com/211522598/443321547-515eb160-0483-4345-ac6d-9fb02ae499c5.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTY2NTMsIm5iZiI6MTc0NzE1NjM1MywicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzIxNTQ3LTUxNWViMTYwLTA0ODMtNDM0NS1hYzZkLTlmYjAyYWU0OTljNS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNzEyMzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jNjliNTAzOTJjMjJiZGIzYjYzZTRlOGE5NTUyOThjMTY5YzAxM2JhMGFkMDYwYjgyYWQxYTdiYzlkZDljNDg5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.LtOu0deW7i7RqkLnGp-oenOkDeNXIBamsYCuYwl38zQ') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Ensure the page container takes up full height */
+      justify-content: space-between;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 50px;
+    }
+
+    .navbar .nav-links a,
+    .navbar .sign-out {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .sign-out:hover {
+      background-color: #ff7f50;
+    }
+
+    /* Highlight the "Breeds" link */
+    .navbar .nav-links a.active {
+      background-color: #ff7f50;
+    }
+
+    .main-content {
+      flex: 1; /* Allow content to grow */
+      padding: 100px 20px 40px; /* Add padding to make space for the navbar and footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .blur-box {
+      background: rgba(0, 0, 0, 0.6); /* Darker background for readability */
+      backdrop-filter: blur(2px); /* Apply blur effect */
+      -webkit-backdrop-filter: blur(5px); /* For Safari */
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .main-content h1,
+    .main-content p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .main-content h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .main-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">PURRCAT</div>
+      <div class="nav-links">
+        <a href="mainhome.html">Home</a>
+        <a href="breeds.html">Breeds</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Feedback.html">Feedback</a>
+      </div>
+      <a href="signin.html" class="sign-out">Sign Out</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="blur-box">
+        <h1>About Us!</h1>
+        <p>
+          At PURRCAT, we celebrate the unique beauty and personalities of three extraordinary feline types—Long Coat, Short Hair, and Hairless Cats. Whether you adore the elegant fluff of a Persian, the sleek charm of a Bengal, or the distinctive grace of a Sphynx, our platform is dedicated to showcasing these magnificent breeds.
+        </p>
+        <p>
+          Explore the world of long-haired, short-haired, and hairless felines—learn about their personalities, care tips, and what makes them so special. Whether you're a lifelong cat lover or just starting your journey, PURRCAT is your go-to place for everything about these three incredible feline categories!
+        </p>
+        <p>
+          From the majestic Maine Coon and playful Ragdoll to the talkative Siamese and plush British Shorthair, every cat featured on PURRCAT has its own special charm. We believe that every cat deserves love, appreciation, and the perfect home that understands their unique needs.
+        </p>
+      </div>
+    </div>
+  </div>
+    <!-- JavaScript -->
+  <script>
+    // Function to handle feedback submission
+    function submitFeedback() {
+      const rating = document.querySelector('input[name="rating"]:checked');
+      const comment = document.querySelector('.comment-box').value;
+
+      if (!rating) {
+        alert('Please select a rating.');
+        return;
+      }
+
+      const ratingValue = rating.value;
+      console.log('Rating:', ratingValue);
+      console.log('Comment:', comment);
+
+      // You can send the feedback to the server or save it accordingly
+      alert('Thank you for your feedback!');
+    }
+  </script>
+</body>
+</html>

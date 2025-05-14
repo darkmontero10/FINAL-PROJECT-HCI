@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurrCat - Breeds</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://private-user-images.githubusercontent.com/211522598/443296335-f2e6b8a4-5120-4e85-b747-4f2475c1f2dd.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTI0NTUsIm5iZiI6MTc0NzE1MjE1NSwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMjk2MzM1LWYyZTZiOGE0LTUxMjAtNGU4NS1iNzQ3LTRmMjQ3NWMxZjJkZC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjAyMzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNDg5ZTgzYjQ3Y2FkMDJjYzUzNjFkOTY4YjZlOWEzZDRiODdkY2Y3NWI3ZmE1YmIxZjM0MjYzZDFjMmRlMTYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.dasQQ_MihuzcpAKfgcGlswzJbdWGFBtTglDZXaJco8c') no-repeat center center fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+
+    /* Navbar style */
+    .navbar {
+      width: 100%;
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 50px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      background-color: #ff7f50;
+    }
+
+    .navbar .sign-out {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .sign-out:hover {
+      background-color: #ff7f50;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-top: 100px; /* Adjusted for navbar space */
+      padding: 20px;
+    }
+
+    .main-content .heading {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .dropdown-container {
+      text-align: left;
+      margin-bottom: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 105px;
+    }
+
+    .dropdown-container label {
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .dropdown {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    .main-content .category-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .category {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .category img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .category .category-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .category .category-description {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .category .btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #ff7f50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .category .btn:hover {
+      background-color: #ff5a30;
+    }
+
+    /* Hidden class for filtered content */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">PURRCAT</div>
+    <div class="nav-links">
+      <a href="mainhome.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="Feedback.html">Feedback</a>
+    </div>
+    <a href="signin.html" class="sign-out">Sign Out</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Dropdown for Coat Type (left aligned) -->
+    <div class="dropdown-container">
+      <label for="coat-type"></label>
+      <select id="coat-type" class="dropdown">
+        <option value="all">All Cats</option>
+        <option value="long-coat">Long Coat Cats</option>
+        <option value="short-hair">Short Hair Cats</option>
+        <option value="hairless">Hairless Cats</option>
+      </select>
+    </div>
+
+    <!-- Categories for Breeds -->
+    <div class="category-container">
+      <!-- Long Coat Cats -->
+      <div class="category long-coat">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443304917-4d36a64a-4b92-4504-ad84-e68f7f64b77c.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTM4NzksIm5iZiI6MTc0NzE1MzU3OSwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzA0OTE3LTRkMzZhNjRhLTRiOTItNDUwNC1hZDg0LWU2OGY3ZjY0Yjc3Yy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjI2MTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMjA4ZTc3OWY4NzlhYjVmZGQ0M2E3OTA0YWM5NDZlZjVmNWRiNTM5YTQ5ZDkwMWViN2M4MjMxZjc3YTUzMmI5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.nO4G5YQR5QUD8HjQhpvWwOwMM-HpHb539-sa4KughSE" alt="Long Coat Cats">
+        <div class="category-title">Long Coat Cats 🐱</div>
+        <div class="category-description">
+          "Fluffy and elegant, long-haired cats require regular grooming but reward you with their stunning looks and soft coats."
+        </div>
+        <a href="Longcoat1.html" class="btn">EXPLORE!</a>
+      </div>
+
+
+      <!-- Long Coat Cats -->
+      <div class="category long-coat">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443309175-e8f28def-63ff-4462-944e-964b19dc1f06.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTQ1MzgsIm5iZiI6MTc0NzE1NDIzOCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzA5MTc1LWU4ZjI4ZGVmLTYzZmYtNDQ2Mi05NDRlLTk2NGIxOWRjMWYwNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjM3MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mZmM0YmQ2ZjgyMWFiYWZjNTYxYzY1MmJkN2FhYjUwNjFmNTdjNjhlYzgwNTQzZjZmM2NmNjk0MjM2Y2Q2ZDViJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xQYMjL4ua0keBfCtK1t1kzxJupTlXQlBQw0hNoDZnuI" alt="Long Coat Cats">
+        <div class="category-title">Long Coat Cats 🐱</div>
+        <div class="category-description">
+          "Fluffy and elegant, long-haired cats require regular grooming but reward you with their stunning looks and soft coats."
+        </div>
+        <a href="Longcoat2.html" class="btn">EXPLORE!</a>
+      </div>
+
+      <!-- Long Coat Cats -->
+      <div class="category long-coat">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443311554-176399de-2f1f-4b1a-a1ae-bc3fa4488706.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTQ5MzUsIm5iZiI6MTc0NzE1NDYzNSwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzExNTU0LTE3NjM5OWRlLTJmMWYtNGIxYS1hMWFlLWJjM2ZhNDQ4ODcwNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjQzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYmMzMTE4YmMzMzZjNTliOTI4M2QxMjUwZmYyYWI0MWI4MTIzMGM2MzJlNTc5MWMzMDdjOWJmZjg0ZWU1ZTJmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.rJJ2xJEVJHLfRq6igXIJVjm25ir37fZXX13EcqFVAPw" alt="Long Coat Cats">
+        <div class="category-title">Long Coat Cats 🐱</div>
+        <div class="category-description">
+          "Fluffy and elegant, long-haired cats require regular grooming but reward you with their stunning looks and soft coats."
+        </div>
+        <a href="Longcoat3.html" class="btn">EXPLORE!</a>
+      </div>
+
+      <!-- Short Hair Cats -->
+      <div class="category short-hair">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443315828-a314b518-7724-486c-ba01-4112d7d94058.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTU2NjAsIm5iZiI6MTc0NzE1NTM2MCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE1ODI4LWEzMTRiNTE4LTc3MjQtNDg2Yy1iYTAxLTQxMTJkN2Q5NDA1OC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjU2MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYmI2OWZhM2FlYzQ0ZGMyZGQwNDVmY2IzMzNkN2NmN2RjMGIwM2I4NDVmZTc1MjIzNzMyZmY4N2M1NmRmZDJlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.oFOEItsQ5Scs3jKmvLEg3Ue51louOMvuYhyyHyyxHec" alt="Short Hair Cats">
+        <div class="category-title">Short Hair Cats 🐾</div>
+        <div class="category-description">
+          "Sleek, low-maintenance, and full of personality, short-haired cats are perfect for busy pet owners."
+        </div>
+        <a href="Shorthair1.html" class="btn">EXPLORE!</a>
+      </div>
+
+      <!-- Short Hair Cats -->
+      <div class="category short-hair">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443315866-2432253a-c9ae-4e33-b602-3eb01f7902f4.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTU2NjAsIm5iZiI6MTc0NzE1NTM2MCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE1ODY2LTI0MzIyNTNhLWM5YWUtNGUzMy1iNjAyLTNlYjAxZjc5MDJmNC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjU2MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kZDNlZjdmOWQyZDE1MGFmZTkwZWJlNDE5ZTQwY2E3NTBjZmJjZjJlODM3ZjU3NmYxYWI0NzIzMzQzMmM2NjZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GRYJCiJVYB-rUQnEWOWtvChfXL9sPr9_ldbm1gnv0RI" alt="Short Hair Cats">
+        <div class="category-title">Short Hair Cats 🐾</div>
+        <div class="category-description">
+          "Sleek, low-maintenance, and full of personality, short-haired cats are perfect for busy pet owners."
+        </div>
+        <a href="Shorthair2.html" class="btn">EXPLORE!</a>
+      </div>
+
+          <!-- Short Hair Cats -->
+      <div class="category short-hair">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443315898-b6a7c573-609a-467c-8816-36a33230028f.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTU2NjAsIm5iZiI6MTc0NzE1NTM2MCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE1ODk4LWI2YTdjNTczLTYwOWEtNDY3Yy04ODE2LTM2YTMzMjMwMDI4Zi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNjU2MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNTI4ZTAwN2I2NjdmZDJlMTA5OTRjZjJkYWEyOTQ4Y2YwODVlYzUwMzcyNmIyZDA4NWI4ZDI2ZGI1Y2E1ZDdjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.AB4oLp7veq1uaCF0C5lgedmRxTqQQEWt6Q-KZG2vsdw" alt="Short Hair Cats">
+        <div class="category-title">Short Hair Cats 🐾</div>
+        <div class="category-description">
+          "Sleek, low-maintenance, and full of personality, short-haired cats are perfect for busy pet owners."
+        </div>
+        <a href="Shorthair3.html" class="btn">EXPLORE!</a>
+      </div>
+
+      <!-- Hairless Cats -->
+      <div class="category hairless">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443319207-fc71edd0-16da-48af-bc21-704f4fcef37d.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTYzMDAsIm5iZiI6MTc0NzE1NjAwMCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE5MjA3LWZjNzFlZGQwLTE2ZGEtNDhhZi1iYzIxLTcwNGY0ZmNlZjM3ZC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNzA2NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mZmUyNzg2NWFjMjlmNTEwYjczYTNjOWVlZWVhMjhlZjQ5ZWZhNmIwY2ZjZDU0YTgxMjgwNGQ4NDM0N2Q4YTc5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ipVKwq-GkzlPpXbf6y6ihYS_kHSpQIdEhfGwbLG16oc" class = "Hairles Cats" alt="Hairless Cats">
+        <div class="category-title">Hairless Cats 🐾</div>
+        <div class="category-description">
+          "Unique and affectionate, these cats may lack fur, but they make up for it with their warmth and loving nature."
+        </div>
+        <a href="Hairless1.html" class="btn">EXPLORE!</a>
+      </div>
+
+         <!-- Hairless Cats -->
+      <div class="category hairless">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443319420-999f6bbf-6abf-4a8d-bc17-62db98844cd3.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTYzMDAsIm5iZiI6MTc0NzE1NjAwMCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE5NDIwLTk5OWY2YmJmLTZhYmYtNGE4ZC1iYzE3LTYyZGI5ODg0NGNkMy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNzA2NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODZiMjBiZmY1NjgxZjQ3ZmMxYzdmOTU4ZGM4NDdiNmIyNzc2NTA4ZmM2ODkyZGNhYWYxNmVmNmUwZWM0MmY5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.eEQ0kwfw6gk838wF5fr0da5flvytu4loRYsILMqTYo4" class = "Hairles Cats" alt="Hairless Cats">
+        <div class="category-title">Hairless Cats 🐾</div>
+        <div class="category-description">
+          "Unique and affectionate, these cats may lack fur, but they make up for it with their warmth and loving nature."
+        </div>
+        <a href="Hairless2.html" class="btn">EXPLORE!</a>
+      </div>
+
+          <!-- Hairless Cats -->
+      <div class="category hairless">
+        <img src="https://private-user-images.githubusercontent.com/211522598/443319465-74d61d91-8cf9-433c-b402-9ab1ee500dcf.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDcxNTYzMDAsIm5iZiI6MTc0NzE1NjAwMCwicGF0aCI6Ii8yMTE1MjI1OTgvNDQzMzE5NDY1LTc0ZDYxZDkxLThjZjktNDMzYy1iNDAyLTlhYjFlZTUwMGRjZi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxM1QxNzA2NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZTJhMmQxNGQ0Yjg3N2RjY2NhNzY2ZDY2NjRkNTA1MzFkYjg4NmIzOGU3Njk1NTI1MTRkZDI1NTllNzg3OTM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.qWIu1uIY2OPTNSuoFBCUcCBsMzBFDYER5rn_PdH8YEI" class = "Hairles Cats" alt="Hairless Cats">
+        <div class="category-title">Hairless Cats 🐾</div>
+        <div class="category-description">
+          "Unique and affectionate, these cats may lack fur, but they make up for it with their warmth and loving nature."
+        </div>
+        <a href="Hairless3.html" class="btn">EXPLORE!</a>
+      </div>
+
+    
+  <script>
+    const dropdown = document.getElementById('coat-type');
+    const categories = document.querySelectorAll('.category');
+
+    dropdown.addEventListener('change', function() {
+      const selectedValue = this.value;
+
+      categories.forEach(function(category) {
+        if (selectedValue === 'all' || category.classList.contains(selectedValue)) {
+          category.classList.remove('hidden');
+        } else {
+          category.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
