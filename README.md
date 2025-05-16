@@ -18,3 +18,4 @@
 ![pusa 1](https://github.com/user-attachments/assets/0053d846-2bda-469f-845b-bf72d52612b7)
 
 ![cat-7732877](https://github.com/user-attachments/assets/92afac39-09b1-494e-a4d1-aa180ea3bdb6)
+![pusa short 2](https://github.com/user-attachments/assets/31c59120-02cb-4544-93f4-e20e1eb91f92)
